@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <head>
+        <Title>Login Form</Title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    </head>
+    <body>
+        <div class="box">
+    <span class="box__borderline"></span>
+    <form action="http://dev1.100karma.com/api/admin/user/login" method="post">
+        <div class="form">
+            <h2>Login</h2>
+
+            <div class="input">
+                <div class="inputBox">
+                    <label for="email">Username</label>
+
+<input type="email" id="email"  required />
+                </div>
+                <div class="inputBox">
+                    <label for="">Password</label>
+                    <input type="password">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Sign In" id="error1"> 
+                </div>
+            </div>
+            <p class="forgot">Forgot Password? <a href="#">Click Here</a></p>
+
+        </div>
+        </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- partial -->
+  <script>
+
+document.getElementById('error1').onclick = function(){
+    Swal.fire({
+  title: 'Error!',
+  text: 'Do you want to continue',
+  icon: 'error',
+  confirmButtonText: 'Okay'
+})
+};
+
+    
+  </script>
+</body>
+</html>
